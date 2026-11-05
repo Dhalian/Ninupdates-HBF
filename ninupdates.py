@@ -72,7 +72,7 @@ SYSTEMS = {
         "description": "Une nouvelle mise à jour de la **Nintendo Switch 2** est disponible !\n⚠️ **Veuillez attendre les instructions pour la mise à jour sur une console exécutant ns2jb**",
         "color": 0xFF3C28,
         "author_icon": "",
-        "thumbnail": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS2.png",
+        "thumbnail": "",
         "image": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS2.png",
     },
 }
