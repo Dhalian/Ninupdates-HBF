@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }} # toujours la dernière version, même en cas de re-run
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -33,10 +35,17 @@ jobs:
 
       - name: Save state
         run: |
-          if [ -n "$(git status --porcelain seen.json)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add seen.json
-            git commit -m "Mise à jour de seen.json"
-            git push
+          if [ -z "$(git status --porcelain seen.json)" ]; then
+            echo "Rien à sauvegarder."
+            exit 0
           fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add seen.json
+          git commit -m "Mise à jour de seen.json"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin "${{ github.event.repository.default_branch }}" && git push && exit 0
+            echo "Push refusé, nouvel essai ($i/3)..."
+            sleep 5
+          done
+          exit 1
