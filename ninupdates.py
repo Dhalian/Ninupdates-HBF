@@ -62,8 +62,8 @@ SYSTEMS = {
         "description": "Une nouvelle mise à jour de la **Nintendo Switch** est disponible !\n⚠️ **Veuillez attendre les instructions pour la mise à jour sur une console Atmosphere**",
         "color": 0xE60012,
         "author_icon": "",
-        "thumbnail": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS1.png",
-        "image": "",
+        "thumbnail": "",
+        "image": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS2.png",
     },
     # Mise à jour du firmware - Nintendo Switch 2
     "bee": {
@@ -73,7 +73,7 @@ SYSTEMS = {
         "color": 0xFF3C28,
         "author_icon": "",
         "thumbnail": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS2.png",
-        "image": "",
+        "image": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS2.png",
     },
 }
 
