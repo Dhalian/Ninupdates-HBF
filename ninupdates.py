@@ -63,7 +63,7 @@ SYSTEMS = {
         "color": 0xE60012,
         "author_icon": "",
         "thumbnail": "",
-        "image": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS2.png",
+        "image": "https://homebrewfrance.github.io/cdn/serveur/BANNER_NS1.png",
     },
     # Mise à jour du firmware - Nintendo Switch 2
     "bee": {
